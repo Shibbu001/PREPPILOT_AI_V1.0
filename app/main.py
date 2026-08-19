@@ -4,7 +4,7 @@ from pypdf import PdfReader
 from io import BytesIO
 import os
 
-from app.rag import analyze_resume
+# from app.rag import analyze_resume
 
 
 app = FastAPI(
@@ -115,6 +115,8 @@ async def analyze(
     # --------------------------------------
 
     try:
+
+        from app.rag import analyze_resume
 
         result = analyze_resume(
             resume_text=resume_text,
